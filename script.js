@@ -88,7 +88,7 @@ function enviarPreguntaSincrona(pregunta) {
         const xhr = new XMLHttpRequest();
 
         // Configurar la solicitud como POST y sincrónica
-        xhr.open('POST', 'https://chatbot.dev.dtt.tja.ucb.edu.bo/pregunta', false);
+        //xhr.open('POST', 'https://chatbot.dev.dtt.tja.ucb.edu.bo/pregunta', false);
         //xhr.open('POST', 'http://127.0.0.1:5000/pregunta', false);  // El tercer argumento 'false' hace que la solicitud sea sincrónica
 
         // Establecer los encabezados
