@@ -109,7 +109,7 @@
         // Función para obtener los datos de la API
         async function obtenerDatos() {
             try {
-                const respuesta = await fetch('http://127.0.0.1:5000/getall');
+                const respuesta = await fetch('https://chatbot.dev.dtt.tja.ucb.edu.bo/getall');
                 
                 if (!respuesta.ok) {
                     throw new Error('Error en la solicitud: ' + respuesta.status);
@@ -149,7 +149,7 @@
                 h2.onclick = async function() {
                     try {
                         const id = objeto[0];
-                        const respuesta = await fetch(`http://127.0.0.1:5000/get/${id}`);
+                        const respuesta = await fetch(`https://chatbot.dev.dtt.tja.ucb.edu.bo/get/${id}`);
                         
                         if (!respuesta.ok) {
                             throw new Error('Error en la solicitud: ' + respuesta.status);
@@ -162,7 +162,7 @@
                         document.getElementById('modal-descripcion').textContent =  detalleObjeto.descripcion;
 
                         // Obtener la imagen del objeto
-                        const respuestaImagen = await fetch(`http://127.0.0.1:5000/getpicture/${id}`);
+                        const respuestaImagen = await fetch(`https://chatbot.dev.dtt.tja.ucb.edu.bo/getpicture/${id}`);
                         if (!respuestaImagen.ok) {
                             throw new Error('Error en la solicitud de la imagen: ' + respuestaImagen.status);
                         }
